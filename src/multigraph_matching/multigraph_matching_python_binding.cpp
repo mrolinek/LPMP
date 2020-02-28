@@ -185,10 +185,6 @@ PYBIND11_MODULE(multigraph_matching_py, m) {
                 const double lb = s.lower_bound();
                 return lb;
                 })
-        .def("upper_bound", [](mgm_solver& s){
-                const double ub = s.upper_bound();
-                return ub;
-                })
         .def("result",  [](mgm_solver& s){ return s.GetProblemConstructor().write_out_labeling(); });
 
 
